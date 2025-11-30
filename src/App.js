@@ -66,11 +66,11 @@ function WalletStatus({ status }) {
 
   return (
     <div className="mb-4">
-      <p className={`text-sm ${status.connected ? 'text-green-600 font-medium' : 'text-gray-600'}`}>
+      <p className={`text-sm ${status.connected ? 'text-green-400 font-medium' : 'text-text-medium'}`}>
         Wallet Status: {status.connected ? '✅ Connected' : '❌ Not Connected'}
       </p>
       {status.connected && status.walletName && (
-        <p className="text-xs text-gray-500 mt-1">
+        <p className="text-xs text-text-medium mt-1">
           Using: {status.walletName} Wallet
         </p>
       )}
@@ -260,13 +260,13 @@ function App() {
         }`}>
           <div className="w-full h-full overflow-y-auto">
             <div className="min-h-screen bg-primary">
-            <header className="bg-white shadow-lg">
+            <header className="bg-surface shadow-lg border-b border-primary-light">
               <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                   <div className="flex items-center gap-4">
                     <button
                       onClick={() => transitionToView('menu', 'backward')}
-                      className="flex items-center gap-2 text-purple-600 hover:text-purple-800 transition-colors"
+                      className="flex items-center gap-2 text-accent-purple hover:text-purple-400 transition-colors"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -314,7 +314,7 @@ function App() {
                     {statusMessages.length > 0 && (
                       <button
                         onClick={clearStatusMessages}
-                        className="text-sm bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-2 rounded-lg transition-colors"
+                        className="text-sm bg-surface-light hover:bg-primary-light text-text-dark px-3 py-2 rounded-lg transition-colors border border-primary-light"
                       >
                         Clear Log
                       </button>
@@ -379,22 +379,22 @@ function App() {
                   </div>
                 </div>
                 
-                <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-md">
-                  <p className="text-xs text-blue-800">
+                <div className="mt-4 p-3 bg-accent-blue bg-opacity-10 border border-accent-blue border-opacity-30 rounded-md">
+                  <p className="text-xs text-accent-blue">
                     <strong>Note:</strong> This app uses Cardano's testnet for demonstration. 
                     Make sure your wallet is set to "Preview" or "Pre-production" testnet mode and has test ADA.
                   </p>
                 </div>
                 
-                <div className="mt-2 p-3 bg-green-50 border border-green-200 rounded-md">
-                  <p className="text-xs text-green-800">
+                <div className="mt-2 p-3 bg-green-500 bg-opacity-10 border border-green-500 border-opacity-30 rounded-md">
+                  <p className="text-xs text-green-400">
                     <strong>Real Blockchain:</strong> This app creates real Cardano blockchain transactions. 
                     Configure your Blockfrost API key in the settings to enable transaction submission and verification.
                   </p>
                 </div>
                 
-                <div className="mt-2 p-3 bg-purple-50 border border-purple-200 rounded-md">
-                  <p className="text-xs text-purple-800">
+                <div className="mt-2 p-3 bg-accent-purple bg-opacity-10 border border-accent-purple border-opacity-30 rounded-md">
+                  <p className="text-xs text-accent-purple">
                     <strong>Setup Required:</strong> Get your free Blockfrost API key at{' '}
                     <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="underline">
                       blockfrost.io

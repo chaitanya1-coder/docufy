@@ -90,13 +90,13 @@ const MainMenu = ({ onSelectOption, onHome }) => {
         {backgroundLights.map((light, index) => (
           <div
             key={index}
-            className={`absolute ${light.size} bg-white rounded-full blur-3xl transition-all duration-[2000ms] ease-in-out ${light.transform || ''}`}
+            className={`absolute ${light.size} bg-accent-blue rounded-full blur-3xl transition-all duration-[2000ms] ease-in-out ${light.transform || ''}`}
             style={{
               top: light.top,
               left: light.left,
               bottom: light.bottom,
               right: light.right,
-              opacity: index === currentLight ? lightOpacity * 0.3 : 0,
+              opacity: index === currentLight ? lightOpacity * 0.2 : 0,
               transform: `${light.transform || ''} scale(${index === currentLight ? 1 : 0.8})`,
             }}
           />
@@ -104,7 +104,7 @@ const MainMenu = ({ onSelectOption, onHome }) => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 bg-white bg-opacity-10 backdrop-blur-md border-b border-white border-opacity-20">
+      <header className="relative z-10 bg-surface bg-opacity-80 backdrop-blur-md border-b border-primary-light">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <button

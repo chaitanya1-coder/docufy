@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global text color override - using elegant dark grey for better contrast */
+/* Global text color override - using light colors for dark mode */
 * {
-  color: #1e293b !important;
+  color: #f1f5f9 !important;
 }
 
 /* Override for specific elements that should remain light */
@@ -17,9 +17,9 @@
 
 /* Accent colors for better visual hierarchy */
 .accent-text {
-  color: #3b82f6 !important;
+  color: #60a5fa !important;
 }
 
 .accent-purple-text {
-  color: #8b5cf6 !important;
+  color: #a78bfa !important;
 }

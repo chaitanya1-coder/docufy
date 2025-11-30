@@ -34,16 +34,16 @@ function WalletStatus({ status }) {
 
   return (
     <div className="mb-4">
-      <p className={`text-sm ${status.connected ? 'text-green-600 font-medium' : 'text-black'}`}>
+      <p className={`text-sm ${status.connected ? 'text-green-400 font-medium' : 'text-text-dark'}`}>
         Wallet Status: {status.connected ? '✅ Connected' : '❌ Not Connected'}
       </p>
       {status.connected && status.walletName && (
-        <p className="text-xs text-black mt-1">
+        <p className="text-xs text-text-medium mt-1">
           Using: {status.walletName} Wallet
         </p>
       )}
       {status.error && (
-        <p className="text-xs text-red-600 mt-1">
+        <p className="text-xs text-red-400 mt-1">
           Error: {status.error.message || status.error}
         </p>
       )}
@@ -103,7 +103,7 @@ const IssueCertificatePage = ({ onBack, onHome }) => {
             <div className="flex items-center space-x-3">
               <button
                 onClick={() => onBack()}
-                className="flex items-center gap-2 text-black hover:text-blue-600 transition-colors mr-4"
+                className="flex items-center gap-2 text-text-dark hover:text-accent-blue transition-colors mr-4"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -163,8 +163,8 @@ const IssueCertificatePage = ({ onBack, onHome }) => {
         <div className="px-4 py-6 sm:px-0">
           {/* Page Title */}
           <div className="mb-8 text-center">
-            <h2 className="text-4xl font-bold text-black mb-2">Issue Certificate</h2>
-            <p className="text-lg text-black">
+            <h2 className="text-4xl font-bold text-text-dark mb-2">Issue Certificate</h2>
+            <p className="text-lg text-text-medium">
               Upload and register certificates on the Cardano blockchain
             </p>
           </div>
@@ -191,16 +191,16 @@ const IssueCertificatePage = ({ onBack, onHome }) => {
           {/* Tutorial Information Section */}
           <div className="mb-6 bg-surface rounded-lg shadow-lg border border-primary-light p-6">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="text-3xl text-black">
+              <div className="text-3xl text-text-dark">
                 <FontAwesomeIcon icon={faCertificate} />
               </div>
-              <h2 className="text-2xl font-semibold text-black">Issuing Certificates - How It Works</h2>
+              <h2 className="text-2xl font-semibold text-text-dark">Issuing Certificates - How It Works</h2>
             </div>
             
             <div className="space-y-4">
               <div className="p-4 bg-surface-light rounded-lg border border-primary-light">
-                <h3 className="text-lg font-semibold text-black mb-3">Step-by-Step Process:</h3>
-                <ol className="list-decimal list-inside space-y-2 text-black">
+                <h3 className="text-lg font-semibold text-text-dark mb-3">Step-by-Step Process:</h3>
+                <ol className="list-decimal list-inside space-y-2 text-text-medium">
                   <li>Configure your Blockfrost API key in the settings above.</li>
                   <li>Connect your Cardano wallet using the wallet button.</li>
                   <li>Upload your PDF certificate file using the form above.</li>
@@ -210,27 +210,27 @@ const IssueCertificatePage = ({ onBack, onHome }) => {
               </div>
 
               <div className="space-y-3">
-                <div className="p-3 bg-accent-blue bg-opacity-5 border border-accent-blue border-opacity-20 rounded-md">
-                  <p className="text-sm text-black">
+                <div className="p-3 bg-accent-blue bg-opacity-10 border border-accent-blue border-opacity-30 rounded-md">
+                  <p className="text-sm text-accent-blue">
                     <FontAwesomeIcon icon={faKey} className="mr-2" />
                     <strong>Note:</strong> This app uses Cardano's testnet for demonstration.
                     Make sure your wallet is set to "Preview" or "Pre-production" testnet mode and has test ADA.
                   </p>
                 </div>
                 
-                <div className="p-3 bg-green-50 border border-green-200 rounded-md">
-                  <p className="text-sm text-black">
+                <div className="p-3 bg-green-500 bg-opacity-10 border border-green-500 border-opacity-30 rounded-md">
+                  <p className="text-sm text-green-400">
                     <FontAwesomeIcon icon={faLink} className="mr-2" />
                     <strong>Real Blockchain:</strong> This app creates real Cardano blockchain transactions.
                     Configure your Blockfrost API key in the settings to enable transaction submission and verification.
                   </p>
                 </div>
                 
-                <div className="p-3 bg-accent-purple bg-opacity-5 border border-accent-purple border-opacity-20 rounded-md">
-                  <p className="text-sm text-black">
+                <div className="p-3 bg-accent-purple bg-opacity-10 border border-accent-purple border-opacity-30 rounded-md">
+                  <p className="text-sm text-accent-purple">
                     <FontAwesomeIcon icon={faWallet} className="mr-2" />
                     <strong>Setup Required:</strong> Get your free Blockfrost API key at{' '}
-                    <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="underline text-black hover:text-blue-600">
+                    <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="underline text-accent-purple hover:text-purple-400">
                       blockfrost.io
                     </a>{' '}
                     and enter it in the configuration panel above.

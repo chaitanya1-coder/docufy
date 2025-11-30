@@ -104,13 +104,13 @@ const Home = ({ onGetStarted, onTutorial }) => {
         {backgroundLights.map((light, index) => (
           <div
             key={index}
-            className={`absolute ${light.size} bg-white rounded-full blur-3xl transition-all duration-[2000ms] ease-in-out ${light.transform || ''}`}
+            className={`absolute ${light.size} bg-accent-blue rounded-full blur-3xl transition-all duration-[2000ms] ease-in-out ${light.transform || ''}`}
             style={{
               top: light.top,
               left: light.left,
               bottom: light.bottom,
               right: light.right,
-              opacity: index === currentLight ? lightOpacity * 0.3 : 0, // More visible at 3.5% max
+              opacity: index === currentLight ? lightOpacity * 0.2 : 0, // Adjusted for dark mode
               transform: `${light.transform || ''} scale(${index === currentLight ? 1 : 0.8})`,
             }}
           />
@@ -118,7 +118,7 @@ const Home = ({ onGetStarted, onTutorial }) => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 bg-white bg-opacity-10 backdrop-blur-md border-b border-white border-opacity-20">
+      <header className="relative z-10 bg-surface bg-opacity-80 backdrop-blur-md border-b border-primary-light">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center justify-center">
@@ -194,8 +194,8 @@ const Home = ({ onGetStarted, onTutorial }) => {
               onClick={() => handleDotClick(index)}
               className={`w-4 h-4 rounded-full transition-all duration-300 transform hover:scale-125 ${
                 currentSection === index
-                  ? 'bg-white shadow-lg scale-110'
-                  : 'bg-white bg-opacity-40 hover:bg-opacity-60'
+                  ? 'bg-accent-blue shadow-lg scale-110'
+                  : 'bg-accent-blue bg-opacity-40 hover:bg-opacity-60'
               }`}
               aria-label={`Go to section ${index + 1}`}
             />
@@ -234,7 +234,7 @@ const Home = ({ onGetStarted, onTutorial }) => {
       </main>
 
       {/* Features Grid */}
-      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-white bg-opacity-5 backdrop-blur-sm">
+      <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-surface bg-opacity-30 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-4">
@@ -280,7 +280,7 @@ const Home = ({ onGetStarted, onTutorial }) => {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-black bg-opacity-20 backdrop-blur-sm border-t border-white border-opacity-20 py-8">
+      <footer className="relative z-10 bg-primary backdrop-blur-sm border-t border-primary-light py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
             <p className="text-text-medium text-sm text-center">

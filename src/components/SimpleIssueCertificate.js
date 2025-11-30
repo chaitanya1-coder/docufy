@@ -63,15 +63,15 @@ const SimpleIssueCertificate = ({ onStatusUpdate, walletApi, config }) => {
   };
 
   return (
-    <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg border border-white border-opacity-20 p-6">
-      <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+    <div className="bg-surface rounded-lg border border-primary-light p-6">
+      <h2 className="text-2xl font-bold text-text-dark mb-4 flex items-center gap-2">
         📄 Issue Certificate
       </h2>
 
       <div className="space-y-4">
         {/* File Upload */}
         <div>
-          <label className="block text-sm font-medium text-white mb-2">
+          <label className="block text-sm font-medium text-text-dark mb-2">
             Select Certificate File (PDF)
           </label>
           <input
@@ -79,10 +79,10 @@ const SimpleIssueCertificate = ({ onStatusUpdate, walletApi, config }) => {
             type="file"
             accept=".pdf"
             onChange={handleFileSelect}
-            className="w-full p-3 bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-30 rounded-md focus:ring-2 focus:ring-white focus:ring-opacity-50 text-white placeholder-blue-100 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white file:text-primary hover:file:bg-blue-50"
+            className="w-full p-3 bg-surface-light border border-primary-light rounded-md focus:ring-2 focus:ring-accent-blue focus:ring-opacity-50 text-text-dark placeholder-text-medium file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-accent-blue file:text-white hover:file:bg-accent-purple"
           />
           {selectedFile && (
-            <div className="mt-2 text-sm text-green-200 bg-green-500 bg-opacity-20 p-2 rounded backdrop-blur-sm">
+            <div className="mt-2 text-sm text-green-400 bg-green-500 bg-opacity-20 p-2 rounded border border-green-500 border-opacity-30">
               ✅ Selected: {selectedFile.name} ({blockchainService.formatFileSize(selectedFile.size)})
             </div>
           )}
@@ -94,8 +94,8 @@ const SimpleIssueCertificate = ({ onStatusUpdate, walletApi, config }) => {
           disabled={!isConnected || !isConfigured || !selectedFile || isLoading}
           className={`w-full py-3 px-4 rounded-md font-medium transition-all backdrop-blur-sm ${
             !isConnected || !isConfigured || !selectedFile || isLoading
-              ? 'bg-gray-500 bg-opacity-30 text-gray-300 cursor-not-allowed border border-gray-300 border-opacity-30'
-              : 'bg-secondary bg-opacity-80 text-white hover:bg-opacity-100 border border-blue-400 border-opacity-50 hover:border-opacity-80'
+              ? 'bg-gray-600 bg-opacity-50 text-gray-400 cursor-not-allowed border border-gray-500 border-opacity-50'
+              : 'bg-accent-blue text-white hover:bg-accent-purple border border-accent-blue border-opacity-50 hover:border-opacity-80'
           }`}
         >
           {isLoading ? 'Processing...' : 'Issue Certificate on Blockchain'}
@@ -103,12 +103,12 @@ const SimpleIssueCertificate = ({ onStatusUpdate, walletApi, config }) => {
 
         {/* Status Messages */}
         {!isConnected && (
-          <div className="text-sm text-red-200 bg-red-500 bg-opacity-10 p-3 rounded backdrop-blur-sm border border-red-200 border-opacity-30">
+          <div className="text-sm text-red-400 bg-red-500 bg-opacity-10 p-3 rounded border border-red-500 border-opacity-30">
             ❌ Wallet not connected
           </div>
         )}
         {!isConfigured && (
-          <div className="text-sm text-orange-200 bg-orange-500 bg-opacity-10 p-3 rounded backdrop-blur-sm border border-orange-200 border-opacity-30">
+          <div className="text-sm text-orange-400 bg-orange-500 bg-opacity-10 p-3 rounded border border-orange-500 border-opacity-30">
             ⚠️ Blockfrost API key not configured
           </div>
         )}

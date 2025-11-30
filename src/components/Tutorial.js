@@ -72,40 +72,40 @@ const Tutorial = ({ onComplete, onHome }) => {
       title: "Quick Setup Steps",
       content: (
         <div className="space-y-6">
-          <h3 className="text-2xl font-semibold text-white mb-6">Get Started in 3 Easy Steps</h3>
+          <h3 className="text-2xl font-semibold text-text-dark mb-6">Get Started in 3 Easy Steps</h3>
           
           <div className="space-y-4">
-            <div className="flex items-start space-x-4 p-4 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white font-bold">
+            <div className="flex items-start space-x-4 p-4 bg-surface rounded-lg border border-primary-light">
+              <div className="w-8 h-8 rounded-full border-2 border-accent-blue flex items-center justify-center text-accent-blue font-bold">
                 1
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Get Your API Key</h4>
-                <p className="text-white">
-                  Sign up at <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="text-white underline">blockfrost.io</a> and get your free API key for Cardano testnet access.
+                <h4 className="text-lg font-semibold text-text-dark mb-2">Get Your API Key</h4>
+                <p className="text-text-medium">
+                  Sign up at <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="text-accent-blue underline">blockfrost.io</a> and get your free API key for Cardano testnet access.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 p-4 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white font-bold">
+            <div className="flex items-start space-x-4 p-4 bg-surface rounded-lg border border-primary-light">
+              <div className="w-8 h-8 rounded-full border-2 border-accent-blue flex items-center justify-center text-accent-blue font-bold">
                 2
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Install a Cardano Wallet</h4>
-                <p className="text-white">
+                <h4 className="text-lg font-semibold text-text-dark mb-2">Install a Cardano Wallet</h4>
+                <p className="text-text-medium">
                   Download and set up a Cardano wallet like Lace, Nami, or Eternl. Make sure it's set to "Preview" testnet mode.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-4 p-4 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-white font-bold">
+            <div className="flex items-start space-x-4 p-4 bg-surface rounded-lg border border-primary-light">
+              <div className="w-8 h-8 rounded-full border-2 border-accent-blue flex items-center justify-center text-accent-blue font-bold">
                 3
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Get Test ADA</h4>
-                <p className="text-white">
+                <h4 className="text-lg font-semibold text-text-dark mb-2">Get Test ADA</h4>
+                <p className="text-text-medium">
                   Visit the Cardano testnet faucet to get free test ADA for transactions. You'll need this for blockchain operations.
                 </p>
               </div>
@@ -119,35 +119,35 @@ const Tutorial = ({ onComplete, onHome }) => {
       title: "How It Works",
       content: (
         <div className="space-y-6">
-          <h3 className="text-2xl font-semibold text-white mb-6">Understanding Docufy</h3>
+          <h3 className="text-2xl font-semibold text-text-dark mb-6">Understanding Docufy</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <div className="text-4xl text-white mb-4">
+            <div className="text-center p-6 bg-surface rounded-lg border border-primary-light">
+              <div className="text-4xl text-accent-blue mb-4">
                 <FontAwesomeIcon icon={faCertificate} />
               </div>
-              <h4 className="text-lg font-semibold text-white mb-3">Digital Certificates</h4>
-              <p className="text-white text-sm">
+              <h4 className="text-lg font-semibold text-text-dark mb-3">Digital Certificates</h4>
+              <p className="text-text-medium text-sm">
                 Upload your PDF certificates and create tamper-proof digital records on the blockchain.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <div className="text-4xl text-white mb-4">
+            <div className="text-center p-6 bg-surface rounded-lg border border-primary-light">
+              <div className="text-4xl text-accent-blue mb-4">
                 <FontAwesomeIcon icon={faLink} />
               </div>
-              <h4 className="text-lg font-semibold text-white mb-3">Blockchain Storage</h4>
-              <p className="text-white text-sm">
+              <h4 className="text-lg font-semibold text-text-dark mb-3">Blockchain Storage</h4>
+              <p className="text-text-medium text-sm">
                 Certificate hashes are stored on Cardano blockchain, ensuring immutable and permanent records.
               </p>
             </div>
 
-            <div className="text-center p-6 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <div className="text-4xl text-white mb-4">
+            <div className="text-center p-6 bg-surface rounded-lg border border-primary-light">
+              <div className="text-4xl text-accent-blue mb-4">
                 <FontAwesomeIcon icon={faShieldAlt} />
               </div>
-              <h4 className="text-lg font-semibold text-white mb-3">Instant Verification</h4>
-              <p className="text-white text-sm">
+              <h4 className="text-lg font-semibold text-text-dark mb-3">Instant Verification</h4>
+              <p className="text-text-medium text-sm">
                 Anyone can verify certificate authenticity by comparing the uploaded file with blockchain records.
               </p>
             </div>
@@ -161,16 +161,16 @@ const Tutorial = ({ onComplete, onHome }) => {
       content: (
         <div className="space-y-6">
           <div className="flex items-center space-x-3 mb-6">
-            <div className="text-3xl text-white">
+            <div className="text-3xl text-accent-blue">
               <FontAwesomeIcon icon={faCertificate} />
             </div>
-            <h3 className="text-2xl font-semibold text-white">Issuing Certificates</h3>
+            <h3 className="text-2xl font-semibold text-text-dark">Issuing Certificates</h3>
           </div>
           
           <div className="space-y-4">
-            <div className="p-4 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <h4 className="text-lg font-semibold text-white mb-3">Step-by-Step Process:</h4>
-              <ol className="list-decimal list-inside space-y-2 text-white">
+            <div className="p-4 bg-surface rounded-lg border border-primary-light">
+              <h4 className="text-lg font-semibold text-text-dark mb-3">Step-by-Step Process:</h4>
+              <ol className="list-decimal list-inside space-y-2 text-text-medium">
                 <li>Configure your Blockfrost API key in the settings.</li>
                 <li>Connect your Cardano wallet.</li>
                 <li>Upload your PDF certificate file.</li>
@@ -180,27 +180,27 @@ const Tutorial = ({ onComplete, onHome }) => {
             </div>
 
             <div className="space-y-3">
-              <div className="p-3 bg-blue-50 bg-opacity-20 border border-blue-200 border-opacity-30 rounded-md">
-                <p className="text-xs text-white">
+              <div className="p-3 bg-accent-blue bg-opacity-10 border border-accent-blue border-opacity-30 rounded-md">
+                <p className="text-xs text-accent-blue">
                   <FontAwesomeIcon icon={faKey} className="mr-2" />
                   <strong>Note:</strong> This app uses Cardano's testnet for demonstration. 
                   Make sure your wallet is set to "Preview" or "Pre-production" testnet mode and has test ADA.
                 </p>
               </div>
               
-              <div className="p-3 bg-green-50 bg-opacity-20 border border-green-200 border-opacity-30 rounded-md">
-                <p className="text-xs text-white">
+              <div className="p-3 bg-green-500 bg-opacity-10 border border-green-500 border-opacity-30 rounded-md">
+                <p className="text-xs text-green-400">
                   <FontAwesomeIcon icon={faLink} className="mr-2" />
                   <strong>Real Blockchain:</strong> This app creates real Cardano blockchain transactions. 
                   Configure your Blockfrost API key in the settings to enable transaction submission and verification.
                 </p>
               </div>
               
-              <div className="p-3 bg-purple-50 bg-opacity-20 border border-purple-200 border-opacity-30 rounded-md">
-                <p className="text-xs text-white">
+              <div className="p-3 bg-accent-purple bg-opacity-10 border border-accent-purple border-opacity-30 rounded-md">
+                <p className="text-xs text-accent-purple">
                   <FontAwesomeIcon icon={faWallet} className="mr-2" />
                   <strong>Setup Required:</strong> Get your free Blockfrost API key at{' '}
-                  <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="underline text-white">
+                  <a href="https://blockfrost.io" target="_blank" rel="noopener noreferrer" className="underline text-accent-purple">
                     blockfrost.io
                   </a>{' '}
                   and enter it in the configuration panel.
@@ -217,16 +217,16 @@ const Tutorial = ({ onComplete, onHome }) => {
       content: (
         <div className="space-y-6">
           <div className="flex items-center space-x-3 mb-6">
-            <div className="text-3xl text-white">
+            <div className="text-3xl text-accent-blue">
               <FontAwesomeIcon icon={faSearch} />
             </div>
-            <h3 className="text-2xl font-semibold text-white">Verifying Certificates</h3>
+            <h3 className="text-2xl font-semibold text-text-dark">Verifying Certificates</h3>
           </div>
           
           <div className="space-y-4">
-            <div className="p-4 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm">
-              <h4 className="text-lg font-semibold text-white mb-3">Verification Process:</h4>
-              <ol className="list-decimal list-inside space-y-2 text-white">
+            <div className="p-4 bg-surface rounded-lg border border-primary-light">
+              <h4 className="text-lg font-semibold text-text-dark mb-3">Verification Process:</h4>
+              <ol className="list-decimal list-inside space-y-2 text-text-medium">
                 <li>Configure your Blockfrost API key in the settings.</li>
                 <li>Connect your wallet to access blockchain data.</li>
                 <li>Upload the certificate you want to verify.</li>
@@ -236,22 +236,22 @@ const Tutorial = ({ onComplete, onHome }) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 bg-green-50 bg-opacity-10 rounded-lg border border-green-200 border-opacity-30">
-                <h5 className="text-white font-semibold mb-2">
-                  <FontAwesomeIcon icon={faCheckCircle} className="mr-2" />
+              <div className="p-4 bg-green-500 bg-opacity-10 rounded-lg border border-green-500 border-opacity-30">
+                <h5 className="text-text-dark font-semibold mb-2">
+                  <FontAwesomeIcon icon={faCheckCircle} className="mr-2 text-green-400" />
                   Valid Certificate
                 </h5>
-                <p className="text-white text-sm">
+                <p className="text-text-medium text-sm">
                   Certificate hash matches blockchain records. Document is authentic and unmodified.
                 </p>
               </div>
               
-              <div className="p-4 bg-red-50 bg-opacity-10 rounded-lg border border-red-200 border-opacity-30">
-                <h5 className="text-white font-semibold mb-2">
-                  <FontAwesomeIcon icon={faShieldAlt} className="mr-2" />
+              <div className="p-4 bg-red-500 bg-opacity-10 rounded-lg border border-red-500 border-opacity-30">
+                <h5 className="text-text-dark font-semibold mb-2">
+                  <FontAwesomeIcon icon={faShieldAlt} className="mr-2 text-red-400" />
                   Invalid Certificate
                 </h5>
-                <p className="text-white text-sm">
+                <p className="text-text-medium text-sm">
                   Certificate not found on blockchain or has been modified. Authentication failed.
                 </p>
               </div>
@@ -309,13 +309,13 @@ const Tutorial = ({ onComplete, onHome }) => {
         {backgroundLights.map((light, index) => (
           <div
             key={index}
-            className={`absolute ${light.size} bg-white rounded-full blur-3xl transition-all duration-[2000ms] ease-in-out ${light.transform || ''}`}
+            className={`absolute ${light.size} bg-accent-blue rounded-full blur-3xl transition-all duration-[2000ms] ease-in-out ${light.transform || ''}`}
             style={{
               top: light.top,
               left: light.left,
               bottom: light.bottom,
               right: light.right,
-              opacity: index === currentLight ? lightOpacity * 0.3 : 0, // More visible at 3.5% max
+              opacity: index === currentLight ? lightOpacity * 0.2 : 0,
               transform: `${light.transform || ''} scale(${index === currentLight ? 1 : 0.8})`,
             }}
           />
@@ -323,7 +323,7 @@ const Tutorial = ({ onComplete, onHome }) => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 bg-white bg-opacity-10 backdrop-blur-md border-b border-white border-opacity-20">
+      <header className="relative z-10 bg-surface bg-opacity-80 backdrop-blur-md border-b border-primary-light">
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <button
@@ -353,26 +353,26 @@ const Tutorial = ({ onComplete, onHome }) => {
                 <div key={step.id} className="flex items-center">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                     index <= currentStep 
-                      ? 'bg-white text-primary shadow-lg' 
-                      : 'bg-white bg-opacity-30 text-white'
+                      ? 'bg-accent-blue text-white shadow-lg' 
+                      : 'bg-accent-blue bg-opacity-30 text-text-dark'
                   }`}>
                     {index + 1}
                   </div>
                   {index < steps.length - 1 && (
                     <div className={`w-8 h-0.5 mx-1 transition-all duration-300 ${
-                      index < currentStep ? 'bg-white' : 'bg-white bg-opacity-30'
+                      index < currentStep ? 'bg-accent-blue' : 'bg-accent-blue bg-opacity-30'
                     }`}></div>
                   )}
                 </div>
               ))}
             </div>
             <div className="text-center">
-              <h2 className="text-3xl font-bold text-white">{steps[currentStep].title}</h2>
+              <h2 className="text-3xl font-bold text-text-dark">{steps[currentStep].title}</h2>
             </div>
           </div>
 
           {/* Step Content */}
-          <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-3xl border border-white border-opacity-20 mb-8 h-[550px] relative overflow-hidden">
+          <div className="bg-surface rounded-3xl border border-primary-light mb-8 h-[550px] relative overflow-hidden">
             <div className="absolute inset-0">
               {/* Render all steps with proper positioning */}
               {steps.map((step, index) => (
@@ -396,8 +396,8 @@ const Tutorial = ({ onComplete, onHome }) => {
               disabled={currentStep === 0 || isTransitioning}
               className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 currentStep === 0 || isTransitioning
-                  ? 'bg-gray-500 bg-opacity-50 text-gray-300 cursor-not-allowed' 
-                  : 'bg-white bg-opacity-20 text-white hover:bg-opacity-30'
+                  ? 'bg-gray-600 bg-opacity-50 text-gray-400 cursor-not-allowed' 
+                  : 'bg-surface-light text-text-dark hover:bg-primary-light border border-primary-light'
               }`}
             >
               <FontAwesomeIcon icon={faArrowLeft} />
@@ -412,8 +412,8 @@ const Tutorial = ({ onComplete, onHome }) => {
                   disabled={isTransitioning}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentStep 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white bg-opacity-40 hover:bg-opacity-60'
+                      ? 'bg-accent-blue scale-125' 
+                      : 'bg-accent-blue bg-opacity-40 hover:bg-opacity-60'
                   } ${isTransitioning ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                 />
               ))}
@@ -422,7 +422,7 @@ const Tutorial = ({ onComplete, onHome }) => {
             <div className="flex items-center space-x-3">
               <button
                 onClick={() => onComplete()}
-                className="text-white text-sm hover:text-blue-200 transition-colors underline px-3 py-2"
+                className="text-text-dark text-sm hover:text-accent-blue transition-colors underline px-3 py-2"
               >
                 Skip
               </button>
@@ -431,8 +431,8 @@ const Tutorial = ({ onComplete, onHome }) => {
                 disabled={isTransitioning}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform ${
                   currentStep === steps.length - 1 
-                    ? 'bg-gradient-to-r from-white to-blue-100 text-primary hover:from-blue-50 hover:to-blue-200 hover:scale-110 shadow-lg hover:shadow-2xl' 
-                    : 'bg-white text-primary hover:bg-blue-50 hover:scale-105'
+                    ? 'bg-gradient-to-r from-accent-blue to-accent-purple text-white hover:from-accent-purple hover:to-accent-blue hover:scale-110 shadow-lg hover:shadow-2xl' 
+                    : 'bg-accent-blue text-white hover:bg-accent-purple hover:scale-105'
                 } ${isTransitioning ? 'cursor-not-allowed opacity-75' : ''}`}
               >
                 <span>{currentStep === steps.length - 1 ? 'Start' : 'Next'}</span>

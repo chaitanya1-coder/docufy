@@ -90,16 +90,16 @@ const CustomWalletConnect = ({ onConnected, onDisconnected, onError }) => {
 
   if (connectedWallet) {
     return (
-      <div className="flex items-center gap-2 bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-lg px-3 py-2">
+      <div className="flex items-center gap-2 bg-surface border border-primary-light rounded-lg px-3 py-2">
         <div className="text-sm">
-          <div className="text-green-200 font-medium">✅ Connected to {connectedWallet.name}</div>
-          <div className="text-xs text-blue-100">
+          <div className="text-green-400 font-medium">✅ Connected to {connectedWallet.name}</div>
+          <div className="text-xs text-text-medium">
             Network: {connectedWallet.networkId === 0 ? 'Testnet' : 'Mainnet'}
           </div>
         </div>
         <button
           onClick={disconnectWallet}
-          className="text-xs bg-red-500 bg-opacity-80 hover:bg-opacity-100 text-white px-2 py-1 rounded transition-all"
+          className="text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded transition-all"
         >
           Disconnect
         </button>
@@ -109,15 +109,15 @@ const CustomWalletConnect = ({ onConnected, onDisconnected, onError }) => {
 
   if (availableWallets.length === 0) {
     return (
-      <div className="text-center p-4 bg-yellow-500 bg-opacity-0 backdrop-blur-sm border border-yellow-200 border-opacity-5 rounded-lg">
-        <p className="text-white font-medium">No Cardano wallets detected</p>
-        <p className="text-blue-100 text-sm mt-1">
+      <div className="text-center p-4 bg-yellow-500 bg-opacity-10 border border-yellow-500 border-opacity-30 rounded-lg">
+        <p className="text-text-dark font-medium">No Cardano wallets detected</p>
+        <p className="text-text-medium text-sm mt-1">
           Please install a Cardano wallet extension like{' '}
-          <a href="https://www.lace.io/" target="_blank" rel="noopener noreferrer" className="underline text-white hover:text-blue-200">
+          <a href="https://www.lace.io/" target="_blank" rel="noopener noreferrer" className="underline text-accent-blue hover:text-purple-400">
             Lace
           </a>
           {' or '}
-          <a href="https://namiwallet.io/" target="_blank" rel="noopener noreferrer" className="underline text-white hover:text-blue-200">
+          <a href="https://namiwallet.io/" target="_blank" rel="noopener noreferrer" className="underline text-accent-blue hover:text-purple-400">
             Nami
           </a>
         </p>
@@ -127,7 +127,7 @@ const CustomWalletConnect = ({ onConnected, onDisconnected, onError }) => {
 
   return (
     <div className="space-y-2">
-      <div className="text-sm font-medium text-white">Choose a wallet to connect:</div>
+      <div className="text-sm font-medium text-text-dark">Choose a wallet to connect:</div>
       <div className="grid gap-2">
         {availableWallets.map(wallet => (
           <button
@@ -135,10 +135,10 @@ const CustomWalletConnect = ({ onConnected, onDisconnected, onError }) => {
             onClick={() => connectWallet(wallet.key)}
             disabled={isConnecting}
             className={`
-              flex items-center gap-3 p-3 border rounded-lg text-left transition-all backdrop-blur-sm
+              flex items-center gap-3 p-3 border rounded-lg text-left transition-all
               ${isConnecting 
-                ? 'bg-white bg-opacity-10 text-blue-200 cursor-not-allowed border-white border-opacity-20' 
-                : 'bg-white bg-opacity-20 hover:bg-opacity-30 hover:border-white border-white border-opacity-20 text-white'
+                ? 'bg-surface-light text-text-medium cursor-not-allowed border-primary-light' 
+                : 'bg-surface hover:bg-surface-light border-primary-light hover:border-accent-blue text-text-dark'
               }
             `}
           >
@@ -147,11 +147,11 @@ const CustomWalletConnect = ({ onConnected, onDisconnected, onError }) => {
             )}
             <div>
               <div className="font-medium">{wallet.name}</div>
-              <div className="text-xs text-blue-100 capitalize">{wallet.key}</div>
+              <div className="text-xs text-text-medium capitalize">{wallet.key}</div>
             </div>
             {isConnecting && (
               <div className="ml-auto">
-                <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin h-4 w-4 text-accent-blue" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
                 </svg>
