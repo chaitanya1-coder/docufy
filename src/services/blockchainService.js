@@ -146,7 +146,7 @@ class BlockchainService {
           certificate_hash: fileHash,
           file_name: fileName,
           issued_at: new Date().toISOString(),
-          issuer: 'CertiFy - Certificate Verifier App',
+          issuer: 'Docufy - Document Verifier App',
           version: '1.0',
           network: config.network
         }
