@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global text color override - using elegant dark grey for better contrast */
+* {
+  color: #1e293b !important;
+}
+
+/* Override for specific elements that should remain light */
+.text-white,
+.text-blue-100,
+.text-blue-200,
+.text-blue-50 {
+  color: white !important;
+}
+
+/* Accent colors for better visual hierarchy */
+.accent-text {
+  color: #3b82f6 !important;
+}
+
+.accent-purple-text {
+  color: #8b5cf6 !important;
+}
